@@ -29,22 +29,6 @@
                   </div> 
                   {% endfor %}
 
-                      <div class="form__group">
-                            <label for="profile_pic">Profile picture</label>
-                            <input id="profile_pic" name="{{field.label}}" type="file" />
-                       </div>
-                        
-            
-
-             <!-- <div class="form__group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text" placeholder="E.g. john@email.com" />
-              </div> -->
-
-                     <!-- <div class="form__group">
-                            <label for="user_bio">Bio</label>
-                            <textarea name="user_bio" id="user_bio" placeholder="Write about yourself..."></textarea>
-                        </div> -->
                         <div class="form__action">
                             <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
                             <button class="btn btn--main" type="submit">Update</button>
