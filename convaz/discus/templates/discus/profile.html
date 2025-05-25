@@ -1,0 +1,64 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+  <main class="profile-page layout layout--3">
+    <div class="container">
+      <!-- Topics Start -->
+      {% include 'discus/topic_component.html' %}
+      <!-- Topics End -->
+
+      <!-- Room List Start -->
+      <div class="roomList">
+        <div class="profile">
+          <div class="profile__avatar">
+            <div class="avatar avatar--large active">
+              {% if user.profile.profile_picture.url is not empty%}
+              <img src="{{user.profile.profile_picture.url }}" />
+              {% else %}
+              <img src="" />
+              {% endif %}
+            </div>
+          </div>
+          <div class="profile__info">
+            {% if request.user.first_name is not empty %}
+            <h3>{{user.first_name}} {{user.last_name}}</h3>
+            <p>@{{user.username}}</p>
+            {% else %}
+            <h3>{{user.username}}</h3>
+            <p>@{{user.username}}</p>
+            {% endif %}
+
+            {% if request.user == user %}
+            <a href="{% url 'edit-user' %}" class="btn btn--main btn--pill">Edit Profile</a>
+            {% endif %}
+          </div>
+           <!-- <div class="profile__about">
+          <h3>About</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo tenetur
+              facilis sunt nemo debitis quisquam hic atque aut? Ducimus alias placeat optio
+              accusamus repudiandae quis ab ex exercitationem rem?
+            
+          </div></p> -->
+        </div>
+
+        <div class="roomList__header">
+          
+        </div>
+        <div class="roomListRoom">
+          <div>
+            <h2><span>CONVERSATION ROOMS HOSTED BY {{user.username}}</span> 
+            </h2>
+          </div>
+          {% include 'discus/feed_component.html' %}
+        </div>
+
+      </div>
+      <!-- Room List End -->
+
+      <!-- Activities Start -->
+      {% include 'discus/activity_component.html'%}
+      <!-- Activities End -->
+    </div>
+  </main>
+{% endblock content %}
