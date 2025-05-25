@@ -11,4 +11,3 @@ PASSWORD: Adminadmin1
 5-25 at 6 19 15 AM" src="https://github.com/user-attachments/assets/766a5ff4-82e3-4e4f-9fe3-8ca725f65db3" />
 
 <img width="1280" alt="Screen Shot 2025-05-25 at 6 01 51 AM" src="https://github.com/user-attachments/assets/ec3691a2-57f5-4493-aa77-0cd0ab12eed6" />
-<img width="1280" alt="Screen Shot 2025-05-25 at 6 19 15 AM" src="https://github.com/user-attachments/assets/57d516b6-2103-4550-97dd-dee1f45dd228" />
